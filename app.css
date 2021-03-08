@@ -4,7 +4,7 @@ html{
 
 body{
     margin: 0;
-    padding: 0;
+    padding-top: 60px;
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -18,14 +18,15 @@ body{
     width: 100vw;
     display: flex;
     justify-content: flex-end;
-    /* position: fixed; */
-    /* opacity: 50%; */
-    z-index: 1;
+    position: fixed;
+    top: 0;
+    left:0;
+    background-color: #FFFFFF;
+    z-index: 2;
 
 }
 
 #navbar ul{
-    /* background-color: blueviolet; */
     /* margin: 0; */
     padding-top: 5px;
     padding-bottom: 5px;
@@ -34,7 +35,6 @@ body{
 }
 
 #navbar ul li{
-    /* background-color: crimson; */
     display: inline-block;
     text-align: center;
     width: 140px;
@@ -54,6 +54,7 @@ a:hover{
 #home{
     background-color: #F8F8F8;
     height: 700px;
+    /* height: 85vh; */
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -71,6 +72,8 @@ a:hover{
     background: url("IMG/Home/IMG01.jpg") center / cover;
     height: 600px; 
     width: 400px;
+    /* height: 75vh; 
+    width: 25vw; */
 
 }
 
@@ -165,14 +168,29 @@ a:hover{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /* background: rgba(57, 73, 81, 0.7); */
+    transition: opacity 0.5s;
+    /* z-index: -1; */
+}
+
+
+.gallery_overlay{
+    height: 100%;
+    width: 100%;
     color:#FFFFFF;
     font-family: MyFont;
+    background: rgba(57, 73, 81, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
 }
+
+.gallery_img:hover .gallery_overlay{
+    background: rgba(0, 0, 0, 0);
+    color: transparent;
+}
+
 .img_asia{
     grid-column: 1 / 2;
     grid-row: 1 / 5;
