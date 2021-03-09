@@ -102,13 +102,13 @@ a:hover{
 
 
 .img_play{
-    background-color: blue;
     height: 800px;
     width: 800px;
     z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .img_person{
@@ -121,7 +121,8 @@ a:hover{
 .about_right{
     font-family: MyFont;
     width: 30%;
-
+    margin-right: 10%;
+    margin-left: 5%
 }
 
 .about_right pre{
