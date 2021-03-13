@@ -9,21 +9,23 @@
     <body>
         <div id="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Skill</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact me</a></li>
+                <li><a onclick="scrollToSection('home')">Home</a></li>
+                <li><a onclick="scrollToSection('about')">About me</a></li>
+                <li><a onclick="scrollToSection('skill')">Skill</a></li>
+                <li><a onclick="scrollToSection('portfolio')">Portfolio</a></li>
+                <li><a onclick="scrollToSection('contact')">Contact me</a></li>
             </ul>
         </div>
         <div id="home">
             <div class="home_left">
                 <h1 style="font-size:120px; color:#4D4F52; font-weight:normal; line-height:30px;">Katie Elison</h1>
                 <h1 style="font-size:40px; color:#4D4F52; font-weight:normal; line-height:30px;">A photographer</h1>
-                <button class='button'; style="margin-top:30px; width:27%; height:50px;">more</button>
+                <button class='button' onclick="scrollToSection('about')" style="margin-top:30px; width:27%; height:50px;">more</button>
             </div>
             <div class="home_right">
-                <div class="home_right_img"></div>
+                <div class="home_right_img" style="background: url('IMG/Home/IMG01.jpg') center / cover"></div>
+                <div class="home_right_img" style="background: url('IMG/Home/IMG02.jpg') center / cover"></div>
+                <div class="home_right_img" style="background: url('IMG/Home/IMG03.jpg') center / cover"></div>
                 <p></p>
                 <div class="home_right_order">
                     <div class="home_right_bar"></div>
@@ -88,4 +90,35 @@
             <p style="text-align:center; font-family:MyFont; color:#AAAEB5;">© 2021 Liz Li-all rights reserved. Terms of Use Privacy & Cookies</p>
         </div>
     </body>
+    
 </html>
+
+<script>
+    let slideShow = function(){
+        let slides = document.getElementsByClassName('home_right_img');
+        let bars = document.getElementsByClassName('home_right_bar');
+        for(let i=0; i<slides.length; i++){
+            slides[i].style.display = "none";
+            bars[i].style.background = "#E7DDDE"; 
+        }
+        slides[slideID].style.display = "flex";
+        bars[slideID].style.background = "#AAAEB5";
+        slideID += 1;
+        if(slideID == slides.length){
+            slideID = 0;
+        }
+        setTimeout(slideShow, 3000);
+    }
+
+    let scrollToSection = function(secID){
+        let sec = document.getElementById(secID);
+        window.scrollTo(0, sec.offsetTop-60);
+    }
+
+
+    let slideID = 0;
+    slideShow();
+
+
+
+</script>

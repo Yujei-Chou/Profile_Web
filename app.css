@@ -45,6 +45,7 @@ a{
     color: #AAAEB5;
     font-family: MyFont;
     font-size: 20px;
+    cursor: pointer;
 }
 
 a:hover{
@@ -54,7 +55,6 @@ a:hover{
 #home{
     background-color: #F8F8F8;
     height: 700px;
-    /* height: 85vh; */
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -69,12 +69,10 @@ a:hover{
 }
 
 .home_right_img{
-    background: url("IMG/Home/IMG01.jpg") center / cover;
     height: 600px; 
     width: 400px;
-    /* height: 75vh; 
-    width: 25vw; */
-
+    display: none;
+    
 }
 
 .home_right_order{
@@ -98,6 +96,7 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 
@@ -188,8 +187,7 @@ a:hover{
 }
 
 .gallery_img:hover .gallery_overlay{
-    background: rgba(0, 0, 0, 0);
-    color: transparent;
+    display: none;
 }
 
 .img_asia{
